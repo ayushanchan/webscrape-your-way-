@@ -12,14 +12,12 @@ def get_website_title(url):
     try:
         print(f"🤖 Reporter visiting: {url}")
         
-        # Send our robot to the website
+       
         response = requests.get(url, timeout=10)
-        response.raise_for_status()  # Check if request was successful
-        
-        # Parse the HTML content
+        response.raise_for_status()  
         soup = BeautifulSoup(response.content, 'html.parser')
         
-        # Find the title tag
+        
         title_tag = soup.find('title')
         
         if title_tag:
@@ -38,10 +36,10 @@ def main():
     """
     Main function - this runs when our reporter starts working
     """
-    # Default website to visit (you can change this)
+    
     default_url = "http://example.com"
     
-    # Check if user provided a different URL
+   
     if len(sys.argv) > 1:
         url = sys.argv[1]
     else:
@@ -50,7 +48,7 @@ def main():
     print("🚀 Robot Reporter Starting...")
     print("=" * 40)
     
-    # Send our reporter to work!
+    
     title = get_website_title(url)
     
     print("=" * 40)
