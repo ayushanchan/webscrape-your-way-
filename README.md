@@ -1,4 +1,4 @@
-Dockerized Python Web Scraper 🐍🐳
+Dockerized Python Web Scraper 
 A simple, containerized Python script that scrapes the title of a website. This project serves as a basic introduction to running Python applications within a Docker container.
 
 Description
